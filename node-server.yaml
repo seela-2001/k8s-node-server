@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: k8s-node-server
+  name: k8s-node-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k8s-node-server
+  template:
+    metadata:
+      labels:
+        app: k8s-node-server
+    spec:
+      containers:
+      - image: sohila12/node-server:1.1.0
+        name: node-server
+        ports:
+        - containerPort: 80
