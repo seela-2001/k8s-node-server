@@ -12,4 +12,3 @@ spec:
   selector:
     app: k8s-node-server
   type: NodePort
-
